@@ -23,11 +23,11 @@ jobs:
 
     - name: Startup Command
       id: hola
-      uses: nisargshah1410/jsactiondemo@v1.8
+      uses: nisargshah1410/jsactiondemo@v1.9
       with:
         language: angular 
         cov: codecov
-        file-path: ./**/target/site/jacoco/jacoco.xml
+        #file-path: ./**/target/site/jacoco/jacoco.xml
     
     - name: npm build, and test
       run: |
@@ -36,22 +36,22 @@ jobs:
       #  npm install codecov --save-dev
       #  ng test
         
-    - name: Echo Startup Command
-      run: echo "${{ steps.hola.outputs.startupcmd }}"
+    #- name: Echo Startup Command
+    #  run: echo "${{ steps.hola.outputs.startupcmd }}"
     
-    - name: Code Coverage
-      run: echo "${{ steps.hola.outputs.coveragetest }}"
+    #- name: Code Coverage
+    #  run: echo "${{ steps.hola.outputs.coveragetest }}"
     
     
-    - name: Coverage if condition
-      run : | 
-        ${{ steps.hola.outputs.coveragetest }}
+   # - name: Coverage if condition
+    #  run : | 
+    #    ${{ steps.hola.outputs.coveragetest }}
       
     
     
-    - name: installing dependencies
-      run: |
-        ${{ steps.hola.outputs.startupcmd }}
+   # - name: installing dependencies
+    #  run: |
+       # ${{ steps.hola.outputs.startupcmd }}
         
    
     
