@@ -26,7 +26,7 @@ jobs:
       uses: nisargshah1410/jsactiondemo@v1.9
       with:
         language: angular 
-        cov: codecov
+        cov: coverlet
         #file-path: ./**/target/site/jacoco/jacoco.xml
     
     - name: npm build, and test
